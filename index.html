@@ -707,7 +707,30 @@ Sanjay Jain</span>
     if (reduce) { setStage('open'); return; }
     setStage('opening');
     clearTimeout(openTimer);
-    openTimer = setTimeout(function () { setStage('open'); }, 2300);
+    openTimer = setTimeout(function () { setStage('open'); peekNext(); }, 2300);
+  }
+  // after opening, glide down a little so the scroll cue and the next section peek in
+  var userScrolled = false;
+  ['wheel', 'touchmove', 'keydown'].forEach(function (ev) { window.addEventListener(ev, function () { userScrolled = true; }, { passive: true }); });
+  function glideTo(y, ms) {
+    var start = window.scrollY, dist = y - start, t0 = null;
+    function step(ts) {
+      if (userScrolled) return;
+      if (t0 === null) t0 = ts;
+      var k = Math.min(1, (ts - t0) / ms), e = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+      window.scrollTo(0, start + dist * e);
+      if (k < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  function peekNext() {
+    userScrolled = false;
+    setTimeout(function () {
+      if (userScrolled || stage !== 'open' || window.scrollY > 10) return;
+      var next = document.getElementById('homes');
+      var target = Math.min(next.offsetTop - window.innerHeight * 0.62, next.offsetTop);
+      if (target > 20) glideTo(target, 1600);
+    }, 900);
   }
   root.classList.add('locked');
   window.scrollTo(0, 0);
