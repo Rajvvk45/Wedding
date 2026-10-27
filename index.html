@@ -67,14 +67,11 @@ a{color:#9E5B48}a:hover{color:#76594D}
 button.gate-seal{border:0;padding:0;margin:0;font:inherit;cursor:pointer;-webkit-appearance:none;appearance:none}
 button.gate-seal:focus-visible{outline:2px solid #9E5B48;outline-offset:6px}
 .is-sealed .gate-seal{animation:sealPulse 2.6s ease-in-out infinite}
-@keyframes sealPulse{0%,100%{box-shadow:0 8px 18px -6px rgba(65,53,47,.45),inset 0 0 0 4px #9E5B48,inset 0 0 0 5px #E2B76A,0 0 0 0 rgba(226,183,106,.55)}60%{box-shadow:0 8px 18px -6px rgba(65,53,47,.45),inset 0 0 0 4px #9E5B48,inset 0 0 0 5px #E2B76A,0 0 0 14px rgba(226,183,106,0)}}
+@keyframes sealPulse{0%,100%{box-shadow:0 8px 18px -6px rgba(65,53,47,.45),inset 0 0 0 4px #9E5B48,inset 0 0 0 5px #E2B76A,0 0 0 4px rgba(255,255,255,.95),0 0 0 4px rgba(255,255,255,.7)}55%{box-shadow:0 8px 18px -6px rgba(65,53,47,.45),inset 0 0 0 4px #9E5B48,inset 0 0 0 5px #E2B76A,0 0 0 6px rgba(255,255,255,.95),0 0 0 26px rgba(255,255,255,0)}}
+.is-sealed .gate-seal::after{content:'';position:absolute;inset:-12px;border-radius:50%;border:2px solid rgba(255,255,255,.9);box-shadow:0 0 18px 4px rgba(255,255,255,.65);animation:sealRing 2.6s ease-in-out infinite;pointer-events:none}
+@keyframes sealRing{0%,100%{transform:scale(.94);opacity:.95}55%{transform:scale(1.08);opacity:.35}}
 button.gate-seal:hover{filter:brightness(1.06)}
-.gate-hint{position:absolute;left:50%;top:calc(51.5% + clamp(104px,28vw,132px) / 2 + 14px);transform:translateX(-50%);z-index:4;margin:0;display:flex;flex-direction:column;align-items:center;gap:0;pointer-events:none;transition:opacity .35s ease;animation:hintBob 2.6s ease-in-out infinite}
-.gate-hint svg{display:block;margin-bottom:-1px}
-.gate-hint span{display:block;padding:7px 14px;border-radius:999px;background:#9E5B48;color:#FFF9F2;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;box-shadow:0 8px 18px -10px rgba(65,53,47,.6)}
-@media (prefers-reduced-motion: reduce){.is-sealed .gate-seal,.gate-hint{animation:none!important}}
-.is-opening .gate-hint{opacity:0;animation:none}
-@keyframes hintBob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,4px)}}
+@media (prefers-reduced-motion: reduce){.is-sealed .gate-seal,.is-sealed .gate-seal::after{animation:none!important}}
 .gate-invite{position:absolute;left:50%;top:calc(51.5% - clamp(104px,28vw,132px) / 2 - 18px);transform:translate(-50%,-100%);z-index:4;margin:0;width:max-content;max-width:86%;padding:10px 18px;border-radius:14px;background:#F3E6D6;box-shadow:0 0 0 1px #E2C7A6;text-align:center;font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:400;line-height:1.25;letter-spacing:0;text-transform:none;color:#41352F;transition:opacity .4s ease}
 .is-opening .gate-invite{opacity:0}
 .sealed-copy{transition:opacity .45s ease}
@@ -169,7 +166,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
 .tl-date{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,3.6vw,21px);font-weight:500;color:#41352F}
 .tl-cap{margin-top:2px;font-size:clamp(12px,3vw,14px);line-height:1.45;color:#76594D;max-width:190px}
 </style>
-<style>[data-if]{display:contents}[data-if][hidden]{display:none}#music-btn[hidden]{display:none!important}.mg-layer{position:fixed;inset:0;pointer-events:none;z-index:65;overflow:hidden}.mg{position:absolute;top:-40px;display:block;opacity:0;animation-name:mgFall;animation-timing-function:cubic-bezier(.35,.1,.55,1);animation-fill-mode:forwards;will-change:transform}.mg svg{display:block;width:100%;height:100%}@keyframes mgFall{0%{opacity:0;transform:translate(0,0) rotate(0)}8%{opacity:1}85%{opacity:1}100%{opacity:0;transform:translate(var(--dx),calc(100vh + 60px)) rotate(var(--rot))}}@media (prefers-reduced-motion:reduce){.mg-layer{display:none}}</style>
+<style>[data-if]{display:contents}[data-if][hidden]{display:none}#music-btn[hidden]{display:none!important}html.locked,html.locked body{overflow:hidden!important;height:100%;overscroll-behavior:none}html.locked body{touch-action:manipulation}html.locked #top{cursor:pointer}.mg-layer{position:fixed;inset:0;pointer-events:none;z-index:65;overflow:hidden}.mg{position:absolute;top:-40px;display:block;opacity:0;animation-name:mgFall;animation-timing-function:cubic-bezier(.35,.1,.55,1);animation-fill-mode:forwards;will-change:transform}.mg svg{display:block;width:100%;height:100%}@keyframes mgFall{0%{opacity:0;transform:translate(0,0) rotate(0)}8%{opacity:1}85%{opacity:1}100%{opacity:0;transform:translate(var(--dx),calc(100vh + 60px)) rotate(var(--rot))}}@media (prefers-reduced-motion:reduce){.mg-layer{display:none}}</style>
 </head>
 <body>
 
@@ -279,7 +276,6 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
         <button type="button" class="gate-seal" id="open-btn" aria-label="Tap to open the invitation">
           <svg viewBox="0 0 60 70" style="width: 56%; height: auto" fill="none" stroke="#E9C27E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Shri Ganesh"><path d="M23 15 L30 5 L37 15"></path><circle cx="30" cy="3.5" r="1.6" fill="#E9C27E" stroke="none"></circle><path d="M19 19 C23 13 37 13 41 19"></path><path d="M19 19 C9 17 5 27 9 35 C12 41 19 41 24 37"></path><path d="M41 19 C51 17 55 27 51 35 C48 41 41 41 36 37"></path><path d="M30 16 V21"></path><circle cx="25" cy="27" r="1.3" fill="#E9C27E" stroke="none"></circle><circle cx="35" cy="27" r="1.3" fill="#E9C27E" stroke="none"></circle><path d="M30 24 C30 36 28 46 30 54 C32 62 40 64 42 58 C43 54 39 52 37 55"></path><path d="M26 39 C24 43 22 44 20 43"></path></svg>
         </button>
-        <p class="gate-hint" aria-hidden="true"><svg width="12" height="8" viewBox="0 0 12 8" fill="#9E5B48"><path d="M6 0 L12 8 H0 Z"></path></svg><span>Tap to open</span></p>
       </div>
       </div>
       </div>
@@ -759,19 +755,34 @@ Sanjay Jain</span>
 
   // gatefold doors
   var stage = 'sealed', gate = $('#gate');
+  var root = document.documentElement, openTimer = null;
   function setStage(st) {
     stage = st;
     gate.className = st === 'open' ? 'is-open' : (st === 'opening' ? 'is-opening' : 'is-sealed');
     $('#gate-line').textContent = st === 'sealed' ? 'a little something, just for you' : ' ';
     show('notOpen', st !== 'open');
+    root.classList.toggle('locked', st === 'sealed');
   }
-  $('#open-btn').addEventListener('click', function () {
+  // one tap anywhere opens the invitation: doors, music and marigolds together
+  function openInvite() {
+    if (stage !== 'sealed') return;
     startMusic();
     showerMarigolds();
-    if (stage !== 'sealed') return;
     if (reduce) { setStage('open'); return; }
     setStage('opening');
-    setTimeout(function () { setStage('open'); }, 2300);
+    clearTimeout(openTimer);
+    openTimer = setTimeout(function () { setStage('open'); }, 2300);
+  }
+  root.classList.add('locked');
+  window.scrollTo(0, 0);
+  document.addEventListener('click', function (ev) {
+    if (stage !== 'sealed') return;
+    if (ev.target.closest && ev.target.closest('#music-btn')) return;
+    if (ev.target.closest && ev.target.closest('a[href]')) ev.preventDefault();
+    openInvite();
+  });
+  document.addEventListener('keydown', function (ev) {
+    if (stage === 'sealed' && (ev.key === 'Enter' || ev.key === ' ' || ev.key === 'ArrowDown' || ev.key === 'PageDown')) { ev.preventDefault(); openInvite(); }
   });
 
   // countdown
@@ -833,7 +844,15 @@ Sanjay Jain</span>
     $('#wa-link').href = 'https://wa.me/' + String(CONFIG.rsvpWhatsApp).replace(/\D/g, '') + '?text=' + encodeURIComponent(text);
     show('notSubmitted', false); show('submitted', true);
   });
-  $('#back-top').addEventListener('click', function () { setStage('sealed'); showered = false; });
+  $('#back-top').addEventListener('click', function (ev) {
+    ev.preventDefault();
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    var tries = 0;
+    (function waitTop() {
+      if (window.scrollY < 2 || tries++ > 60) { window.scrollTo(0, 0); clearTimeout(openTimer); setStage('sealed'); showered = false; }
+      else setTimeout(waitTop, 50);
+    })();
+  });
   $('#edit-reply').addEventListener('click', function () { show('submitted', false); show('notSubmitted', true); });
 
   // background music - starts on the "Open Our Invitation" tap (browsers block autoplay before a tap)
