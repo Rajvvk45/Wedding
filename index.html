@@ -64,7 +64,7 @@ a{color:#9E5B48}a:hover{color:#76594D}
 .is-opening .door-r{transform:rotateY(100deg);opacity:0}
 .gate-seal{position:absolute;left:50%;top:51.5%;width:clamp(104px,28vw,132px);height:clamp(104px,28vw,132px);transform-origin:center;translate:-50% -50%;border-radius:50%;background:#9E5B48;color:#FFF9F2;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;box-shadow:0 8px 18px -6px rgba(65,53,47,.45),inset 0 0 0 5px #9E5B48,inset 0 0 0 6.5px #E2B76A,inset 0 0 0 9px #9E5B48,inset 0 0 0 10px rgba(226,183,106,.5);transition:opacity .45s ease,transform .45s cubic-bezier(.4,0,.2,1)}
 .is-opening .gate-seal{opacity:0;transform:scale(.7)}
-.gate-invite{position:absolute;left:50%;top:calc(51.5% - clamp(104px,28vw,132px) / 2 - 18px);transform:translate(-50%,-100%);z-index:4;margin:0;width:max-content;max-width:86%;padding:10px 18px;border-radius:14px;background:#F3E6D6;box-shadow:0 0 0 1px #E2C7A6;text-align:center;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;line-height:1.55;letter-spacing:.16em;text-transform:uppercase;color:#41352F;transition:opacity .4s ease}
+.gate-invite{position:absolute;left:50%;top:calc(51.5% - clamp(104px,28vw,132px) / 2 - 18px);transform:translate(-50%,-100%);z-index:4;margin:0;width:max-content;max-width:86%;padding:10px 18px;border-radius:14px;background:#F3E6D6;box-shadow:0 0 0 1px #E2C7A6;text-align:center;font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:400;line-height:1.25;letter-spacing:0;text-transform:none;color:#41352F;transition:opacity .4s ease}
 .is-opening .gate-invite{opacity:0}
 .sealed-copy{transition:opacity .45s ease}
 .is-opening .sealed-copy{opacity:0}
@@ -112,7 +112,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
 .navlink{font-size:11px;white-space:nowrap}
 .btn{padding:0 20px;letter-spacing:.1em;font-size:12px}
 .gate-diya{width:30px;height:22px}
-.gate-invite{font-size:11.5px;letter-spacing:.12em;padding:8px 12px}
+.gate-invite{font-size:19px;padding:8px 14px}
 .door > svg{display:none}
 .door-name span:last-child{font-size:31px!important}
 .gate-seal{width:100px!important;height:100px!important}
@@ -148,7 +148,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
 .cd-lbl{font-size:9px;letter-spacing:.08em}
 }
 </style>
-<style>[data-if]{display:contents}[data-if][hidden]{display:none}</style>
+<style>[data-if]{display:contents}[data-if][hidden]{display:none}#music-btn[hidden]{display:none!important}</style>
 </head>
 <body>
 
