@@ -166,7 +166,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
 .tl-date{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,3.6vw,21px);font-weight:500;color:#41352F}
 .tl-cap{margin-top:2px;font-size:clamp(12px,3vw,14px);line-height:1.45;color:#76594D;max-width:190px}
 </style>
-<style>[data-if]{display:contents}[data-if][hidden]{display:none}#music-btn[hidden]{display:none!important}html.locked,html.locked body{overflow:hidden!important;height:100%;overscroll-behavior:none}html.locked body{touch-action:manipulation}html.locked #top{cursor:pointer}.mg-layer{position:fixed;inset:0;pointer-events:none;z-index:65;overflow:hidden}.mg{position:absolute;top:-40px;display:block;opacity:0;animation-name:mgFall;animation-timing-function:cubic-bezier(.35,.1,.55,1);animation-fill-mode:forwards;will-change:transform}.mg svg{display:block;width:100%;height:100%}@keyframes mgFall{0%{opacity:0;transform:translate(0,0) rotate(0)}8%{opacity:1}85%{opacity:1}100%{opacity:0;transform:translate(var(--dx),calc(100vh + 60px)) rotate(var(--rot))}}@media (prefers-reduced-motion:reduce){.mg-layer{display:none}}</style>
+<style>[data-if]{display:contents}[data-if][hidden]{display:none}#music-btn[hidden]{display:none!important}html.locked,html.locked body{overflow:hidden!important;height:100%;overscroll-behavior:none}html.locked body{touch-action:manipulation}html.locked .gate{cursor:pointer}html.locked a[aria-label="Scroll to our story"]{visibility:hidden;opacity:0}a[aria-label="Scroll to our story"]{transition:opacity .6s ease .8s}.mg-layer{position:fixed;inset:0;pointer-events:none;z-index:65;overflow:hidden}.mg{position:absolute;top:-40px;display:block;opacity:0;animation-name:mgFall;animation-timing-function:cubic-bezier(.35,.1,.55,1);animation-fill-mode:forwards;will-change:transform}.mg svg{display:block;width:100%;height:100%}@keyframes mgFall{0%{opacity:0;transform:translate(0,0) rotate(0)}8%{opacity:1}85%{opacity:1}100%{opacity:0;transform:translate(var(--dx),calc(100vh + 60px)) rotate(var(--rot))}}@media (prefers-reduced-motion:reduce){.mg-layer{display:none}}</style>
 </head>
 <body>
 
@@ -776,10 +776,9 @@ Sanjay Jain</span>
   root.classList.add('locked');
   window.scrollTo(0, 0);
   document.addEventListener('click', function (ev) {
-    if (stage !== 'sealed') return;
-    if (ev.target.closest && ev.target.closest('#music-btn')) return;
-    if (ev.target.closest && ev.target.closest('a[href]')) ev.preventDefault();
-    openInvite();
+    if (stage !== 'sealed' || !ev.target.closest) return;
+    if (ev.target.closest('.gate')) { openInvite(); return; }   // only a tap on the doors card opens it
+    if (ev.target.closest('a[href]')) ev.preventDefault();       // other links wait until it is opened
   });
   document.addEventListener('keydown', function (ev) {
     if (stage === 'sealed' && (ev.key === 'Enter' || ev.key === ' ' || ev.key === 'ArrowDown' || ev.key === 'PageDown')) { ev.preventDefault(); openInvite(); }
