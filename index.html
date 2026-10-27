@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFF8EF">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>Vivek &amp; Apoorva · 24 January 2027</title>
 <meta name="description" content="With love, laughter &amp; a lifetime together — you are invited to celebrate the wedding of Vivek &amp; Apoorva on 24 January 2027.">
 <meta property="og:title" content="Vivek &amp; Apoorva · Wedding Invitation">
@@ -94,6 +98,31 @@ html{scroll-behavior:auto}
 .stamp{background:radial-gradient(circle,transparent 0 5px,#FFFDF9 5.5px) 0 0/14px 14px;padding:12px;filter:drop-shadow(0 18px 24px rgba(65,53,47,.18));transition:transform .45s ease}
 .stamp:hover{transform:rotate(0deg) translateY(-4px)!important}
 .board{display:flex;flex-direction:column;align-items:center;gap:2px;background:#F2C230;border:3px solid #E0A91B;border-radius:4px;padding:10px 18px 12px;color:#1F1A17;box-shadow:0 10px 20px -14px rgba(65,53,47,.6)}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
+#top{padding-top:env(safe-area-inset-top)!important}
+footer{padding-bottom:calc(56px + env(safe-area-inset-bottom))!important}
+section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important;padding-right:max(20px,env(safe-area-inset-right))!important}
+@media (hover:none) and (pointer:coarse){.paper-grain{display:none}.stamp:hover,.event:hover,.btn:hover{transform:none}}
+@media (max-width:480px){
+.navlinks{flex-wrap:nowrap!important;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;max-width:100%;gap:0 16px!important}
+.navlinks::-webkit-scrollbar{display:none}
+.navlink{font-size:11px;white-space:nowrap}
+.btn{padding:0 20px;letter-spacing:.1em;font-size:12px}
+.gate-diya{width:30px;height:22px}
+.door-name span:first-child{font-size:12px!important;letter-spacing:.16em!important}
+.door-name span:last-child{font-size:24px!important}
+.bg-art{opacity:.6}
+.carousel-btn{width:40px;height:40px;margin-top:-20px}
+#top > nav{display:none!important}
+#top > div{padding-top:14px!important}
+#gate-line{font-size:22px}
+.gate-card > div{padding:42px 16px 26px!important;gap:10px!important}
+.gate-card svg[viewBox="0 0 80 80"]{display:none}
+.gate-card h1{font-size:46px!important;line-height:1!important}
+.gate-card h1 span:nth-child(2){font-size:20px!important}
+}
+@media (max-width:360px){.door-name span:last-child{font-size:21px!important}.gate-seal{width:96px!important;height:96px!important}#gate-line{display:none}.gate-card h1{font-size:40px!important}.gate-card > div{gap:8px!important;padding-top:36px!important}}
 </style>
 <style>[data-if]{display:contents}[data-if][hidden]{display:none}</style>
 </head>
@@ -138,7 +167,7 @@ html{scroll-behavior:auto}
 
 
 <!-- ============ 1. OPENING INVITATION ============ -->
-<header id="top" class="wc-host" style="position: relative; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 0 20px 40px; overflow: hidden">
+<header id="top" class="wc-host" style="position: relative; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; align-items: center; padding: 0 20px 40px; overflow: hidden">
   <svg class="petal p1" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1 C16 6 16 14 10 19 C4 14 4 6 10 1Z" fill="currentColor"></path></svg>
   <svg class="petal p2" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1 C16 6 16 14 10 19 C4 14 4 6 10 1Z" fill="currentColor"></path></svg>
   <svg class="petal p3" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1 C16 6 16 14 10 19 C4 14 4 6 10 1Z" fill="currentColor"></path></svg>
@@ -150,7 +179,7 @@ html{scroll-behavior:auto}
 
   <nav aria-label="Invitation sections" style="position: relative; z-index: 2; width: 100%; max-width: 1040px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding: 16px 0">
     <a href="#top" class="navlink" style="font-family: 'Pinyon Script', cursive; font-size: 26px; letter-spacing: 0; text-transform: none; color: #9E5B48">V &amp; A</a>
-    <div style="display: flex; flex-wrap: wrap; gap: 0 22px">
+    <div class="navlinks" style="display: flex; flex-wrap: wrap; gap: 0 22px">
       <a href="#story" class="navlink">Our Story</a>
       <a href="#moments" class="navlink">Moments</a>
       <a href="#details" class="navlink">Details</a>
@@ -209,14 +238,14 @@ html{scroll-behavior:auto}
       </div>
 
       <div style="display: flex; align-items: center; justify-content: center; gap: clamp(12px, 4vw, 28px)">
-        <svg viewBox="0 0 60 44" width="46" height="34" aria-hidden="true"><path class="flame" d="M30 22 C24 15 27 7 30 2 C33 7 36 15 30 22Z" fill="#F2B544"></path><path class="flame" d="M30 21 C27.5 17 28.5 12 30 9 C31.5 12 32.5 17 30 21Z" fill="#FFF3D6"></path><path d="M6 24 C12 38 48 38 54 24 Z" fill="#C98A4B" stroke="#9E5B48"></path><path d="M3 24 H57" stroke="#9E5B48" stroke-width="1.3"></path><path d="M18 30 C24 33 36 33 42 30" stroke="#F2B544" fill="none"></path></svg>
+        <svg class="gate-diya" viewBox="0 0 60 44" width="46" height="34" aria-hidden="true"><path class="flame" d="M30 22 C24 15 27 7 30 2 C33 7 36 15 30 22Z" fill="#F2B544"></path><path class="flame" d="M30 21 C27.5 17 28.5 12 30 9 C31.5 12 32.5 17 30 21Z" fill="#FFF3D6"></path><path d="M6 24 C12 38 48 38 54 24 Z" fill="#C98A4B" stroke="#9E5B48"></path><path d="M3 24 H57" stroke="#9E5B48" stroke-width="1.3"></path><path d="M18 30 C24 33 36 33 42 30" stroke="#F2B544" fill="none"></path></svg>
         <div class="gate-actions">
           <div data-if="notOpen">
             <button type="button" class="btn open-btn" id="open-btn">Open Our Invitation</button>
           </div>
           <a href="#story" class="btn celebrate-btn">Come Celebrate With Us</a>
         </div>
-        <svg viewBox="0 0 60 44" width="46" height="34" aria-hidden="true"><path class="flame" d="M30 22 C24 15 27 7 30 2 C33 7 36 15 30 22Z" fill="#F2B544"></path><path class="flame" d="M30 21 C27.5 17 28.5 12 30 9 C31.5 12 32.5 17 30 21Z" fill="#FFF3D6"></path><path d="M6 24 C12 38 48 38 54 24 Z" fill="#C98A4B" stroke="#9E5B48"></path><path d="M3 24 H57" stroke="#9E5B48" stroke-width="1.3"></path><path d="M18 30 C24 33 36 33 42 30" stroke="#F2B544" fill="none"></path></svg>
+        <svg class="gate-diya" viewBox="0 0 60 44" width="46" height="34" aria-hidden="true"><path class="flame" d="M30 22 C24 15 27 7 30 2 C33 7 36 15 30 22Z" fill="#F2B544"></path><path class="flame" d="M30 21 C27.5 17 28.5 12 30 9 C31.5 12 32.5 17 30 21Z" fill="#FFF3D6"></path><path d="M6 24 C12 38 48 38 54 24 Z" fill="#C98A4B" stroke="#9E5B48"></path><path d="M3 24 H57" stroke="#9E5B48" stroke-width="1.3"></path><path d="M18 30 C24 33 36 33 42 30" stroke="#F2B544" fill="none"></path></svg>
       </div>
     </div>
   </div>
@@ -493,22 +522,24 @@ html{scroll-behavior:auto}
             <span>[VENUE NAME]</span>
           </div>
           <p style="margin: 6px 0 0; font-family: 'Caveat', cursive; font-size: 21px; line-height: 1.3; color: #9E5B48">the moment we have been waiting for</p>
+          
         </article>
       
         <article class="event reveal" style="position: relative; background: #FFF9F2; border: 1px solid #E8C9C3; border-radius: 22px; padding: 28px 24px; display: flex; flex-direction: column; gap: 12px">
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
             <svg width="30" height="34" viewBox="0 0 30 34" fill="none" stroke="#BD7965" stroke-width="1" stroke-linecap="round" aria-hidden="true"><path d="M15 33 V14"></path><path d="M15 26 C9 25 5 21 4 16 C10 17 14 21 15 26Z" fill="#B9C5AE" fill-opacity=".6"></path><path d="M15 21 C21 20 25 16 26 11 C20 12 16 16 15 21Z" fill="#B9C5AE" fill-opacity=".6"></path><circle cx="15" cy="8" r="5" fill="#E8C9C3"></circle></svg>
             
-              <span style="font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: #76594D; border: 1px dashed #BD7965; border-radius: 999px; padding: 4px 10px">to confirm</span>
-            
           </div>
           <h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; line-height: 1.15; color: #41352F">Reception</h3>
           <div style="display: flex; flex-direction: column; gap: 4px; font-size: 14px; line-height: 1.55; color: #76594D">
-            <span style="color: #41352F; font-weight: 500">[DATE]</span>
-            <span>[TIME]</span>
-            <span>[VENUE]</span>
+            <span style="color: #41352F; font-weight: 500">Sunday, 24 January 2027</span>
+            <span>7:00 PM onwards</span>
+            <span>Vintage Banquet, CP-5, Sector 9, Vasundhara, Ghaziabad, Uttar Pradesh 201012</span>
           </div>
           <p style="margin: 6px 0 0; font-family: 'Caveat', cursive; font-size: 21px; line-height: 1.3; color: #9E5B48">come hungry, leave dancing — and if Tom &amp; Jerry plays, you know what to do</p>
+          
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Vintage+Banquet+CP-5+Sector+9+Vasundhara+Ghaziabad+201012" target="_blank" rel="noopener" class="btn btn-ghost" style="align-self: flex-start; margin-top: 6px; min-height: 44px; padding: 0 18px; font-size: 12px">Get Directions</a>
+          
         </article>
       
     </div>
@@ -549,7 +580,7 @@ html{scroll-behavior:auto}
       </div>
       <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; gap: 18px; flex: 1 1 220px; max-width: 280px">
         <div class="stamp" style="transform: rotate(2.5deg); width: 100%">
-          <div style="border: 1px solid #E2CDBE; padding: 6px; background: #FFFDF9"><svg viewBox="0 0 200 220" style="display: block; width: 100%; height: auto" role="img" aria-label="The Taj Mahal, Uttar Pradesh"><g filter="url(#wcArt)"><rect width="200" height="220" fill="#F3E6D6"></rect><ellipse cx="100" cy="92" rx="70" ry="56" fill="#EAD2BC" opacity=".7"></ellipse><g fill="#FFFBF5" stroke="#B9A08A" stroke-width="1"><rect x="30" y="64" width="7" height="94"></rect><rect x="163" y="64" width="7" height="94"></rect><path d="M28 64 C28 56 39 56 39 64 Z"></path><path d="M161 64 C161 56 172 56 172 64 Z"></path><rect x="56" y="104" width="88" height="54"></rect><path d="M74 104 C72 84 86 70 100 64 C114 70 128 84 126 104 Z"></path><path d="M60 104 C60 94 72 94 72 104 Z"></path><path d="M128 104 C128 94 140 94 140 104 Z"></path><rect x="20" y="158" width="160" height="10"></rect></g><path d="M100 64 V52" stroke="#B9A08A" stroke-width="1.6"></path><circle cx="100" cy="50" r="2.4" fill="#E2B76A"></circle><path d="M88 158 V128 C88 116 112 116 112 128 V158 Z" fill="#EAD2BC" stroke="#B9A08A"></path><g fill="#EAD2BC" stroke="#B9A08A" stroke-width=".8"><path d="M64 150 V136 C64 130 72 130 72 136 V150 Z"></path><path d="M128 150 V136 C128 130 136 130 136 136 V150 Z"></path><path d="M64 126 V116 C64 112 72 112 72 116 V126 Z"></path><path d="M128 126 V116 C128 112 136 112 136 116 V126 Z"></path></g><rect y="168" width="200" height="52" fill="#9DBD86"></rect><path d="M86 168 L72 220 H128 L114 168 Z" fill="#BFD6DE"></path><path d="M84 168 L70 220 M116 168 L130 220" stroke="#D9A88A" stroke-width="3"></path><g fill="#3F6B4A"><ellipse cx="46" cy="176" rx="6" ry="16"></ellipse><ellipse cx="60" cy="184" rx="6" ry="18"></ellipse><ellipse cx="140" cy="184" rx="6" ry="18"></ellipse><ellipse cx="154" cy="176" rx="6" ry="16"></ellipse></g></g></svg></div>
+          <div style="border: 1px solid #E2CDBE; padding: 6px; background: #FFFDF9"><svg viewBox="0 0 200 220" style="display: block; width: 100%; height: auto" role="img" aria-label="Shri Ram Mandir, Ayodhya, Uttar Pradesh"><g filter="url(#wcArt)"><rect width="200" height="220" fill="#F6E4D4"></rect><circle cx="40" cy="44" r="16" fill="#F2B544" opacity=".85"></circle><g fill="none" stroke="#41352F" stroke-width="1.1" stroke-linecap="round"><path d="M150 30 l4 3 l4 -3"></path><path d="M164 22 l3 2 l3 -2"></path><path d="M172 36 l3 2 l3 -2"></path></g><ellipse cx="14" cy="150" rx="22" ry="28" fill="#6F9A5C"></ellipse><ellipse cx="188" cy="148" rx="22" ry="28" fill="#6F9A5C"></ellipse><rect y="172" width="200" height="48" fill="#E9D3A8"></rect><path d="M100 40 V18" stroke="#8A5A36" stroke-width="1.4"></path><path d="M100 18 L118 23 L100 28 Z" fill="#F28C28"></path><path d="M62 80 V66" stroke="#8A5A36" stroke-width="1.1"></path><path d="M62 66 L73 69 L62 72 Z" fill="#F28C28"></path><path d="M138 80 V66" stroke="#8A5A36" stroke-width="1.1"></path><path d="M138 66 L149 69 L138 72 Z" fill="#F28C28"></path><g stroke="#B97F68" stroke-width="1"><path d="M46 114 C46 99 54 87 62 80 C70 87 78 99 78 114 Z" fill="#E6AF95"></path><path d="M122 114 C122 99 130 87 138 80 C146 87 154 99 154 114 Z" fill="#E6AF95"></path><path d="M76 114 C76 82 87 54 100 42 C113 54 124 82 124 114 Z" fill="#EBB79E"></path></g><g stroke="#C48A70" stroke-width=".9" fill="none"><path d="M100 44 V114"></path><path d="M90 52 C85 72 84 94 86 114"></path><path d="M110 52 C115 72 116 94 114 114"></path><path d="M82 70 H118"></path><path d="M79 86 H121"></path><path d="M77 100 H123"></path><path d="M51 100 H73"></path><path d="M127 100 H149"></path><path d="M62 82 V114"></path><path d="M138 82 V114"></path></g><ellipse cx="100" cy="42" rx="7" ry="3" fill="#C48A70"></ellipse><circle cx="100" cy="37" r="2.6" fill="#E2B76A"></circle><circle cx="62" cy="79" r="2" fill="#E2B76A"></circle><circle cx="138" cy="79" r="2" fill="#E2B76A"></circle><rect x="34" y="114" width="132" height="46" fill="#F0C3AC" stroke="#B97F68"></rect><path d="M34 120 H166" stroke="#C48A70"></path><g fill="#B9745A"><path d="M42 160 V138 C42 132 52 132 52 138 V160 Z"></path><path d="M60 160 V138 C60 132 70 132 70 138 V160 Z"></path><path d="M130 160 V138 C130 132 140 132 140 138 V160 Z"></path><path d="M148 160 V138 C148 132 158 132 158 138 V160 Z"></path></g><path d="M86 160 V136 C86 124 114 124 114 136 V160 Z" fill="#8A4E3A"></path><g stroke="#C48A70" stroke-width="1"><path d="M78 124 V160"></path><path d="M122 124 V160"></path></g><path d="M24 160 H176 V166 H24 Z" fill="#D9A68C"></path><path d="M16 166 H184 V172 H16 Z" fill="#CF9A80"></path><path d="M80 172 L74 186 H126 L120 172 Z" fill="#E3C49A"></path><g fill="#FFFDF9"><circle cx="34" cy="194" r="3"></circle><circle cx="42" cy="198" r="3"></circle><circle cx="166" cy="196" r="3"></circle></g><g fill="#E9A23B"><circle cx="58" cy="190" r="2.6"></circle><circle cx="146" cy="192" r="2.6"></circle></g></g></svg></div>
         </div>
         <div class="board">
           <span lang="hi" style="font-family: 'Tiro Devanagari Hindi', serif; font-size: 24px; line-height: 1.3">उत्तर प्रदेश</span>
@@ -594,7 +625,7 @@ html{scroll-behavior:auto}
         <span style="font-family: 'Cormorant Garamond', serif; font-size: 23px; line-height: 1.45">Anju Jain &amp; Sanjay Jain</span>
       </div>
     </div>
-    <p style="margin: 0; max-width: 520px; font-size: 15px; line-height: 1.8; color: #76594D">and with love from our grandparents, siblings and the whole family — <span style="color: #41352F">[GRANDPARENTS &amp; FAMILY NAMES]</span></p>
+    <p style="margin: 0; max-width: 520px; font-size: 15px; line-height: 1.8; color: #76594D">and with love from our grandparents, siblings and the whole family</p>
   </div>
 </section>
 
@@ -685,7 +716,7 @@ html{scroll-behavior:auto}
     groom: 'Vivek', bride: 'Apoorva',
     weddingISO: '2027-01-24T09:00:00+05:30',
     dateText: '24 January 2027',
-    rsvpWhatsApp: ''   // e.g. '919812345678' — country code + number, digits only
+    rsvpWhatsApp: '919546357636'   // e.g. '919812345678' — country code + number, digits only
   };
   /* ===================================== */
   var reduce = false;
