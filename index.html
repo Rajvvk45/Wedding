@@ -114,7 +114,9 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
 .gate-diya{width:30px;height:22px}
 .gate-invite{font-size:11.5px;letter-spacing:.12em;padding:8px 12px}
 .door > svg{display:none}
-.door-name span:last-child{font-size:24px!important}
+.door-name span:last-child{font-size:31px!important}
+.gate-seal{width:100px!important;height:100px!important}
+.door-l .door-name{right:58px!important}.door-r .door-name{left:58px!important}
 .bg-art{opacity:.6}
 .carousel-btn{width:40px;height:40px;margin-top:-20px}
 #story ol{display:flex!important;flex-wrap:wrap;justify-content:center}
@@ -124,10 +126,10 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
 #gate-line{font-size:22px}
 .gate-card > div{padding:42px 16px 26px!important;gap:10px!important}
 .gate-card svg[viewBox="0 0 80 80"]{display:none}
-.gate-card h1{font-size:46px!important;line-height:1!important}
+.gate-card h1{font-size:56px!important;line-height:1!important}
 .gate-card h1 span:nth-child(2){font-size:20px!important}
 }
-@media (max-width:360px){.door-name span:last-child{font-size:21px!important}.gate-seal{width:96px!important;height:96px!important}#gate-line{display:none}.gate-card h1{font-size:40px!important}.gate-card > div{gap:8px!important;padding-top:36px!important}}
+@media (max-width:360px){.door-name span:last-child{font-size:23px!important}.door-l .door-name{right:54px!important}.door-r .door-name{left:54px!important}.gate-seal{width:96px!important;height:96px!important}#gate-line{display:none}.gate-card h1{font-size:48px!important}.gate-card > div{gap:8px!important;padding-top:36px!important}}
 </style>
 <style>[data-if]{display:contents}[data-if][hidden]{display:none}</style>
 </head>
@@ -196,7 +198,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
   <div style="position: relative; z-index: 1; flex: 1; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 24px">
 
     <div class="is-sealed" id="gate" style="width: 100%; max-width: 520px; display: flex; flex-direction: column; align-items: center; gap: 26px">
-      <p class="sealed-copy" style="margin: 0; font-family: 'Caveat', cursive; font-size: 26px; color: #76594D; text-align: center"><span id="gate-line">a little something, just for you</span></p>
+      <p class="sealed-copy" style="margin: 0; font-family: 'Caveat', cursive; font-size: 26px; color: #9E5B48; text-align: center"><span id="gate-line">a little something, just for you</span></p>
       <div style="width: 100%">
       <svg class="toran" viewBox="0 0 520 64" aria-hidden="true" style="display: block; width: 100%; height: auto; margin-bottom: -22px; position: relative; z-index: 5"><g filter="url(#wcArt)"><path d="M4 6 Q260 26 516 6" fill="none" stroke="#9E5B48" stroke-width="1.4"></path><path d="M20.0 8.9 C13.0 17.9 15.0 30.9 20.0 38.9 C25.0 30.9 27.0 17.9 20.0 8.9Z" fill="#8FA37E"></path><path d="M20.0 11.9 V34.9" stroke="#6F8460" stroke-width=".6"></path><circle cx="54.3" cy="22.3" r="7.5" fill="#E9A23B"></circle><circle cx="54.3" cy="22.3" r="4" fill="#F2B544"></circle><circle cx="54.3" cy="35.3" r="5" fill="#F2B544"></circle><circle cx="54.3" cy="35.3" r="2.4" fill="#E9A23B"></circle><path d="M88.6 17.1 C81.6 26.1 83.6 39.1 88.6 47.1 C93.6 39.1 95.6 26.1 88.6 17.1Z" fill="#8FA37E"></path><path d="M88.6 20.1 V43.1" stroke="#6F8460" stroke-width=".6"></path><circle cx="122.9" cy="29.1" r="7.5" fill="#E9A23B"></circle><circle cx="122.9" cy="29.1" r="4" fill="#F2B544"></circle><circle cx="122.9" cy="42.1" r="5" fill="#F2B544"></circle><circle cx="122.9" cy="42.1" r="2.4" fill="#E9A23B"></circle><path d="M157.1 22.5 C150.1 31.5 152.1 44.5 157.1 52.5 C162.1 44.5 164.1 31.5 157.1 22.5Z" fill="#8FA37E"></path><path d="M157.1 25.5 V48.5" stroke="#6F8460" stroke-width=".6"></path><circle cx="191.4" cy="33.2" r="7.5" fill="#E9A23B"></circle><circle cx="191.4" cy="33.2" r="4" fill="#F2B544"></circle><circle cx="191.4" cy="46.2" r="5" fill="#F2B544"></circle><circle cx="191.4" cy="46.2" r="2.4" fill="#E9A23B"></circle><path d="M225.7 25.3 C218.7 34.3 220.7 47.3 225.7 55.3 C230.7 47.3 232.7 34.3 225.7 25.3Z" fill="#8FA37E"></path><path d="M225.7 28.3 V51.3" stroke="#6F8460" stroke-width=".6"></path><circle cx="260.0" cy="34.6" r="7.5" fill="#E9A23B"></circle><circle cx="260.0" cy="34.6" r="4" fill="#F2B544"></circle><circle cx="260.0" cy="47.6" r="5" fill="#F2B544"></circle><circle cx="260.0" cy="47.6" r="2.4" fill="#E9A23B"></circle><path d="M294.3 25.3 C287.3 34.3 289.3 47.3 294.3 55.3 C299.3 47.3 301.3 34.3 294.3 25.3Z" fill="#8FA37E"></path><path d="M294.3 28.3 V51.3" stroke="#6F8460" stroke-width=".6"></path><circle cx="328.6" cy="33.2" r="7.5" fill="#E9A23B"></circle><circle cx="328.6" cy="33.2" r="4" fill="#F2B544"></circle><circle cx="328.6" cy="46.2" r="5" fill="#F2B544"></circle><circle cx="328.6" cy="46.2" r="2.4" fill="#E9A23B"></circle><path d="M362.9 22.5 C355.9 31.5 357.9 44.5 362.9 52.5 C367.9 44.5 369.9 31.5 362.9 22.5Z" fill="#8FA37E"></path><path d="M362.9 25.5 V48.5" stroke="#6F8460" stroke-width=".6"></path><circle cx="397.1" cy="29.1" r="7.5" fill="#E9A23B"></circle><circle cx="397.1" cy="29.1" r="4" fill="#F2B544"></circle><circle cx="397.1" cy="42.1" r="5" fill="#F2B544"></circle><circle cx="397.1" cy="42.1" r="2.4" fill="#E9A23B"></circle><path d="M431.4 17.1 C424.4 26.1 426.4 39.1 431.4 47.1 C436.4 39.1 438.4 26.1 431.4 17.1Z" fill="#8FA37E"></path><path d="M431.4 20.1 V43.1" stroke="#6F8460" stroke-width=".6"></path><circle cx="465.7" cy="22.3" r="7.5" fill="#E9A23B"></circle><circle cx="465.7" cy="22.3" r="4" fill="#F2B544"></circle><circle cx="465.7" cy="35.3" r="5" fill="#F2B544"></circle><circle cx="465.7" cy="35.3" r="2.4" fill="#E9A23B"></circle><path d="M500.0 8.9 C493.0 17.9 495.0 30.9 500.0 38.9 C505.0 30.9 507.0 17.9 500.0 8.9Z" fill="#8FA37E"></path><path d="M500.0 11.9 V34.9" stroke="#6F8460" stroke-width=".6"></path></g></svg>
       <div class="gate">
@@ -206,7 +208,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
           <p style="margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 12px; font-family: 'Tiro Devanagari Hindi', serif; font-size: 14px; line-height: 1.8; color: #9E5B48"><span lang="hi">॥ श्री गणेशाय नमः ॥</span><span aria-hidden="true">·</span><span lang="pra">॥ णमो अरिहंताणं ॥</span></p>
           <svg width="64" height="64" viewBox="0 0 80 80" aria-hidden="true"><g transform="translate(40 40)"><path transform="rotate(0)" d="M0 -6 C-7 -14 -7 -26 0 -34 C7 -26 7 -14 0 -6Z" fill="#E8C9C3" fill-opacity=".55" stroke="#BD7965" stroke-width=".9"></path><path transform="rotate(45)" d="M0 -6 C-7 -14 -7 -26 0 -34 C7 -26 7 -14 0 -6Z" fill="#E8C9C3" fill-opacity=".55" stroke="#BD7965" stroke-width=".9"></path><path transform="rotate(90)" d="M0 -6 C-7 -14 -7 -26 0 -34 C7 -26 7 -14 0 -6Z" fill="#E8C9C3" fill-opacity=".55" stroke="#BD7965" stroke-width=".9"></path><path transform="rotate(135)" d="M0 -6 C-7 -14 -7 -26 0 -34 C7 -26 7 -14 0 -6Z" fill="#E8C9C3" fill-opacity=".55" stroke="#BD7965" stroke-width=".9"></path><path transform="rotate(180)" d="M0 -6 C-7 -14 -7 -26 0 -34 C7 -26 7 -14 0 -6Z" fill="#E8C9C3" fill-opacity=".55" stroke="#BD7965" stroke-width=".9"></path><path transform="rotate(225)" d="M0 -6 C-7 -14 -7 -26 0 -34 C7 -26 7 -14 0 -6Z" fill="#E8C9C3" fill-opacity=".55" stroke="#BD7965" stroke-width=".9"></path><path transform="rotate(270)" d="M0 -6 C-7 -14 -7 -26 0 -34 C7 -26 7 -14 0 -6Z" fill="#E8C9C3" fill-opacity=".55" stroke="#BD7965" stroke-width=".9"></path><path transform="rotate(315)" d="M0 -6 C-7 -14 -7 -26 0 -34 C7 -26 7 -14 0 -6Z" fill="#E8C9C3" fill-opacity=".55" stroke="#BD7965" stroke-width=".9"></path><path transform="rotate(22.5)" d="M0 -6 C-4 -11 -4 -19 0 -24 C4 -19 4 -11 0 -6Z" fill="#F2D3A0" fill-opacity=".6" stroke="#C9975A" stroke-width=".8"></path><path transform="rotate(67.5)" d="M0 -6 C-4 -11 -4 -19 0 -24 C4 -19 4 -11 0 -6Z" fill="#F2D3A0" fill-opacity=".6" stroke="#C9975A" stroke-width=".8"></path><path transform="rotate(112.5)" d="M0 -6 C-4 -11 -4 -19 0 -24 C4 -19 4 -11 0 -6Z" fill="#F2D3A0" fill-opacity=".6" stroke="#C9975A" stroke-width=".8"></path><path transform="rotate(157.5)" d="M0 -6 C-4 -11 -4 -19 0 -24 C4 -19 4 -11 0 -6Z" fill="#F2D3A0" fill-opacity=".6" stroke="#C9975A" stroke-width=".8"></path><path transform="rotate(202.5)" d="M0 -6 C-4 -11 -4 -19 0 -24 C4 -19 4 -11 0 -6Z" fill="#F2D3A0" fill-opacity=".6" stroke="#C9975A" stroke-width=".8"></path><path transform="rotate(247.5)" d="M0 -6 C-4 -11 -4 -19 0 -24 C4 -19 4 -11 0 -6Z" fill="#F2D3A0" fill-opacity=".6" stroke="#C9975A" stroke-width=".8"></path><path transform="rotate(292.5)" d="M0 -6 C-4 -11 -4 -19 0 -24 C4 -19 4 -11 0 -6Z" fill="#F2D3A0" fill-opacity=".6" stroke="#C9975A" stroke-width=".8"></path><path transform="rotate(337.5)" d="M0 -6 C-4 -11 -4 -19 0 -24 C4 -19 4 -11 0 -6Z" fill="#F2D3A0" fill-opacity=".6" stroke="#C9975A" stroke-width=".8"></path><circle r="6" fill="#F2B544" stroke="#C9975A" stroke-width=".8"></circle><circle cx="0.0" cy="-37.0" r="1.1" fill="#C9975A"></circle><circle cx="18.5" cy="-32.0" r="1.1" fill="#C9975A"></circle><circle cx="32.0" cy="-18.5" r="1.1" fill="#C9975A"></circle><circle cx="37.0" cy="-0.0" r="1.1" fill="#C9975A"></circle><circle cx="32.0" cy="18.5" r="1.1" fill="#C9975A"></circle><circle cx="18.5" cy="32.0" r="1.1" fill="#C9975A"></circle><circle cx="0.0" cy="37.0" r="1.1" fill="#C9975A"></circle><circle cx="-18.5" cy="32.0" r="1.1" fill="#C9975A"></circle><circle cx="-32.0" cy="18.5" r="1.1" fill="#C9975A"></circle><circle cx="-37.0" cy="0.0" r="1.1" fill="#C9975A"></circle><circle cx="-32.0" cy="-18.5" r="1.1" fill="#C9975A"></circle><circle cx="-18.5" cy="-32.0" r="1.1" fill="#C9975A"></circle></g></svg>
           <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(18px, 4.4vw, 21px); color: #76594D">With love, laughter &amp; a lifetime together</p>
-          <h1 style="margin: 4px 0 0; font-family: 'Pinyon Script', cursive; font-weight: 400; font-size: clamp(54px, 15vw, 82px); line-height: 1.05; color: #9E5B48; display: flex; flex-direction: column; align-items: center">
+          <h1 style="margin: 4px 0 0; font-family: 'Pinyon Script', cursive; font-weight: 400; font-size: clamp(60px, 16vw, 96px); line-height: 1.05; color: #9E5B48; display: flex; flex-direction: column; align-items: center">
             <span>Vivek</span>
             <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: .38em; color: #76594D; margin: 2px 0">&amp;</span>
             <span>Apoorva</span>
@@ -225,14 +227,14 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
           <svg width="70" height="92" viewBox="0 0 120 160" fill="none" stroke="#BD7965" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" style="position: absolute; left: 22%; top: 16%; opacity: .9"><path d="M60 158 C58 120 62 90 60 50"></path><path d="M60 120 C45 112 36 100 34 86 C48 90 57 102 60 120Z" fill="#B9C5AE" fill-opacity=".5"></path><path d="M60 100 C74 94 84 82 86 68 C72 72 62 84 60 100Z" fill="#B9C5AE" fill-opacity=".5"></path><circle cx="60" cy="38" r="5"></circle><path d="M60 33 C52 18 40 16 36 26 C34 34 46 40 55 37"></path><path d="M65 37 C74 40 86 34 84 26 C80 16 68 18 60 33"></path><path d="M56 43 C46 50 44 62 52 64 C58 64 60 54 58 44"></path><path d="M62 44 C60 54 62 64 68 64 C76 62 74 50 64 43"></path></svg>
           <div class="door-name">
             
-            <span style="font-family: 'Pinyon Script', cursive; font-size: clamp(26px, 6.6vw, 40px); line-height: 1.3; color: #9E5B48">Vivek</span>
+            <span style="font-family: 'Pinyon Script', cursive; font-size: clamp(32px, 8.4vw, 54px); line-height: 1.25; color: #9E5B48">Vivek</span>
           </div>
         </div>
         <div class="door door-r" aria-hidden="true">
           <svg width="70" height="92" viewBox="0 0 120 160" fill="none" stroke="#BD7965" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" style="position: absolute; right: 22%; top: 16%; opacity: .9; transform: scaleX(-1)"><path d="M60 158 C58 120 62 90 60 50"></path><path d="M60 120 C45 112 36 100 34 86 C48 90 57 102 60 120Z" fill="#E8C9C3" fill-opacity=".7"></path><path d="M60 100 C74 94 84 82 86 68 C72 72 62 84 60 100Z" fill="#E8C9C3" fill-opacity=".7"></path><circle cx="60" cy="38" r="5"></circle><path d="M60 33 C52 18 40 16 36 26 C34 34 46 40 55 37"></path><path d="M65 37 C74 40 86 34 84 26 C80 16 68 18 60 33"></path><path d="M56 43 C46 50 44 62 52 64 C58 64 60 54 58 44"></path><path d="M62 44 C60 54 62 64 68 64 C76 62 74 50 64 43"></path></svg>
           <div class="door-name">
             
-            <span style="font-family: 'Pinyon Script', cursive; font-size: clamp(26px, 6.6vw, 40px); line-height: 1.3; color: #9E5B48">Apoorva</span>
+            <span style="font-family: 'Pinyon Script', cursive; font-size: clamp(32px, 8.4vw, 54px); line-height: 1.25; color: #9E5B48">Apoorva</span>
           </div>
         </div>
         <p class="gate-invite">You are invited<br>to the wedding ceremony of</p>
@@ -312,7 +314,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
       </div>
     </div>
 
-    <p style="margin: 6px 0 0; font-family: 'Caveat', cursive; font-size: 26px; color: #9E5B48">— Vivek &amp; Apoorva</p>
+    <p style="margin: 6px 0 0; font-family: 'Pinyon Script', cursive; font-size: 36px; color: #9E5B48">— Vivek &amp; Apoorva</p>
   </div>
 </section>
 
@@ -488,7 +490,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
     </article>
 
     <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%">
-      <p style="margin: 0; font-family: 'Caveat', cursive; font-size: 24px; color: #76594D"><span id="count-label">counting down to our forever</span></p>
+      <p style="margin: 0; font-family: 'Caveat', cursive; font-size: 24px; color: #9E5B48"><span id="count-label">counting down to our forever</span></p>
       <div role="timer" aria-live="off" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; width: 100%; max-width: 380px">
         <div style="display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 16px 8px; border: 1px solid #E8C9C3; border-radius: 16px; background: #FFF9F2">
           <span style="font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 500; line-height: 1; color: #9E5B48"><span data-cd="days">0</span></span>
@@ -577,7 +579,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
           <span lang="hi" style="font-family: 'Tiro Devanagari Hindi', serif; font-size: 24px; line-height: 1.3">झारखण्ड</span>
           <span style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: .06em">JHARKHAND</span>
         </div>
-        <figcaption style="font-family: 'Caveat', cursive; font-size: 24px; color: #9E5B48; margin-top: -6px">Vivek’s home</figcaption>
+        <figcaption style="font-family: 'Pinyon Script', cursive; font-size: 34px; color: #9E5B48; margin-top: -6px">Vivek’s home</figcaption>
       </figure>
       <div aria-hidden="true" style="display: flex; flex-direction: column; align-items: center; gap: 8px; color: #9E5B48">
         <svg width="90" height="30" viewBox="0 0 90 30" fill="none" stroke="#BD7965" stroke-width="1.4" stroke-dasharray="3 5" stroke-linecap="round"><path d="M2 15 C24 2 66 28 88 15"></path></svg>
@@ -592,7 +594,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
           <span lang="hi" style="font-family: 'Tiro Devanagari Hindi', serif; font-size: 24px; line-height: 1.3">उत्तर प्रदेश</span>
           <span style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: .06em">UTTAR PRADESH</span>
         </div>
-        <figcaption style="font-family: 'Caveat', cursive; font-size: 24px; color: #9E5B48; margin-top: -6px">Apoorva’s home</figcaption>
+        <figcaption style="font-family: 'Pinyon Script', cursive; font-size: 34px; color: #9E5B48; margin-top: -6px">Apoorva’s home</figcaption>
       </figure>
     </div>
   </div>
@@ -709,7 +711,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
       <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 500; letter-spacing: .3em">24 · 01 · 2027</p>
     </div>
   </div>
-  <p style="margin: 56px 0 0; text-align: center; font-family: 'Caveat', cursive; font-size: 20px; color: #76594D">made with love, for the people we love</p>
+  <p style="margin: 56px 0 0; text-align: center; font-family: 'Caveat', cursive; font-size: 20px; color: #9E5B48">made with love, for the people we love</p>
   <p style="margin: 28px 0 0; text-align: center; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: .18em; line-height: 1.6; text-transform: uppercase; color: #41352F">RSVP — Srivastava &amp; Jain Family</p>
   <p style="margin: 8px 0 0; text-align: center"><a href="#top" class="navlink">Back to top ↑</a></p>
 </footer>
