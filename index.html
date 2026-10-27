@@ -64,6 +64,7 @@ a{color:#9E5B48}a:hover{color:#76594D}
 .is-opening .door-r{transform:rotateY(100deg);opacity:0}
 .gate-seal{position:absolute;left:50%;top:51.5%;width:clamp(104px,28vw,132px);height:clamp(104px,28vw,132px);transform-origin:center;translate:-50% -50%;border-radius:50%;background:#9E5B48;color:#FFF9F2;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;box-shadow:0 8px 18px -6px rgba(65,53,47,.45),inset 0 0 0 5px #9E5B48,inset 0 0 0 6.5px #E2B76A,inset 0 0 0 9px #9E5B48,inset 0 0 0 10px rgba(226,183,106,.5);transition:opacity .45s ease,transform .45s cubic-bezier(.4,0,.2,1)}
 .is-opening .gate-seal{opacity:0;transform:scale(.7)}
+.seal-text{display:block;font-family:'Cormorant Garamond',serif;font-size:clamp(20px,5.4vw,25px);font-weight:500;line-height:1.05;letter-spacing:.02em;color:#F6DDA6;text-align:center}
 button.gate-seal{border:0;padding:0;margin:0;font:inherit;cursor:pointer;-webkit-appearance:none;appearance:none}
 button.gate-seal:focus-visible{outline:2px solid #9E5B48;outline-offset:6px}
 .is-sealed .gate-seal{animation:sealPulse 2.6s ease-in-out infinite}
@@ -277,7 +278,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
         </div>
         <p class="gate-invite">You are invited<br>to the wedding ceremony of</p>
         <button type="button" class="gate-seal" id="open-btn" aria-label="Tap to open the invitation">
-          <svg viewBox="0 0 60 70" style="width: 56%; height: auto" fill="none" stroke="#E9C27E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Shri Ganesh"><path d="M23 15 L30 5 L37 15"></path><circle cx="30" cy="3.5" r="1.6" fill="#E9C27E" stroke="none"></circle><path d="M19 19 C23 13 37 13 41 19"></path><path d="M19 19 C9 17 5 27 9 35 C12 41 19 41 24 37"></path><path d="M41 19 C51 17 55 27 51 35 C48 41 41 41 36 37"></path><path d="M30 16 V21"></path><circle cx="25" cy="27" r="1.3" fill="#E9C27E" stroke="none"></circle><circle cx="35" cy="27" r="1.3" fill="#E9C27E" stroke="none"></circle><path d="M30 24 C30 36 28 46 30 54 C32 62 40 64 42 58 C43 54 39 52 37 55"></path><path d="M26 39 C24 43 22 44 20 43"></path></svg>
+          <span class="seal-text">Tap<br>to open</span>
         </button>
       </div>
       </div>
