@@ -119,8 +119,6 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
 .door-l .door-name{right:58px!important}.door-r .door-name{left:58px!important}
 .bg-art{opacity:.6}
 .carousel-btn{width:40px;height:40px;margin-top:-20px}
-#story ol{display:flex!important;flex-wrap:wrap;justify-content:center}
-#story ol > li{flex:0 1 46%}
 #top > nav{display:none!important}
 #top > div{padding-top:14px!important}
 #gate-line{font-size:22px}
@@ -147,6 +145,17 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
 .cd-row{gap:7px}
 .cd-lbl{font-size:9px;letter-spacing:.08em}
 }
+.tl-wrap{width:100%;max-width:660px;margin-top:6px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.tl-kicker{margin:0;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:#76594D}
+.tl{list-style:none;margin:0;padding:0;width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;position:relative}
+.tl::before{content:'';position:absolute;left:16.7%;right:16.7%;top:14px;height:0;border-top:1.5px dashed #BD7965}
+.tl-node{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center}
+.tl-dot{width:14px;height:14px;margin:7px 0 9px;border-radius:50%;background:#FFF9F2;border:2px solid #9E5B48;box-shadow:0 0 0 4px #F5EBDD}
+.tl-heart{margin:0 0 4px;filter:drop-shadow(0 0 0 #F5EBDD)}
+.tl-node .tl-heart{background:#F5EBDD;padding:0 4px;box-sizing:content-box}
+.tl-title{font-family:'Pinyon Script',cursive;font-size:clamp(30px,6vw,40px);line-height:1.15;color:#9E5B48}
+.tl-date{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,3.6vw,21px);font-weight:500;color:#41352F}
+.tl-cap{margin-top:2px;font-size:clamp(12px,3vw,14px);line-height:1.45;color:#76594D;max-width:190px}
 </style>
 <style>[data-if]{display:contents}[data-if][hidden]{display:none}#music-btn[hidden]{display:none!important}.mg-layer{position:fixed;inset:0;pointer-events:none;z-index:65;overflow:hidden}.mg{position:absolute;top:-40px;display:block;opacity:0;animation-name:mgFall;animation-timing-function:cubic-bezier(.35,.1,.55,1);animation-fill-mode:forwards;will-change:transform}.mg svg{display:block;width:100%;height:100%}@keyframes mgFall{0%{opacity:0;transform:translate(0,0) rotate(0)}8%{opacity:1}85%{opacity:1}100%{opacity:0;transform:translate(var(--dx),calc(100vh + 60px)) rotate(var(--rot))}}@media (prefers-reduced-motion:reduce){.mg-layer{display:none}}</style>
 </head>
@@ -303,23 +312,29 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
     <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(21px, 4.6vw, 25px); line-height: 1.6; color: #41352F">It all began at a house party, with friends in common and music in the air. Somewhere between the chatter and the laughter, we found each other - and it simply clicked, instantly.</p>
     <p style="margin: 0; font-size: 16px; line-height: 1.85; color: #76594D; max-width: 500px">One conversation turned into many, and many turned into forever. With full hearts and the people we love most beside us, we invite you to celebrate the beginning of our forever.</p>
 
-    <ol style="list-style: none; margin: 6px 0 0; padding: 0; width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 18px 14px">
-      <li style="display: flex; flex-direction: column; align-items: center; gap: 8px">
-        <svg width="46" height="40" viewBox="0 0 46 40" fill="none" stroke="#9E5B48" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 19 L23 5 L40 19"></path><path d="M10 16 V36 H36 V16" fill="#F3D9B5" fill-opacity=".5"></path><path d="M19 36 V26 H27 V36"></path><path d="M13 8 C15 6 17 7 18 9" stroke="#BD7965"></path><path d="M31 10 l1.5 -3 M34 12 l3 -1.5" stroke="#BD7965"></path><circle cx="30.5" cy="23" r="2" fill="#E8C9C3"></circle></svg>
-        <span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: #41352F">A house party</span>
-        <span style="font-size: 14px; line-height: 1.55; color: #76594D">introduced by friends we'll forever be grateful to</span>
+    <div class="tl-wrap">
+      <p class="tl-kicker">Same date, seven years apart</p>
+      <ol class="tl" aria-label="Our story in dates">
+      <li class="tl-node">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <span class="tl-title">We met</span>
+        <span class="tl-date">24 January 2020</span>
+        <span class="tl-cap">at a house party, through friends</span>
       </li>
-      <li style="display: flex; flex-direction: column; align-items: center; gap: 8px">
-        <svg width="46" height="40" viewBox="0 0 46 40" fill="none" stroke="#9E5B48" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 34 C12 27 8 21 8 16 C8 12 11 9 15 9 C18.5 9 21.5 11 23 14 C24.5 11 27.5 9 31 9 C35 9 38 12 38 16 C38 21 34 27 23 34Z" fill="#E8C9C3" fill-opacity=".6"></path><path d="M6 6 l3 3 M40 6 l-3 3 M23 2 v4" stroke="#BD7965"></path></svg>
-        <span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: #41352F">An instant click</span>
-        <span style="font-size: 14px; line-height: 1.55; color: #76594D">the kind of connection you just know</span>
+      <li class="tl-node">
+        <svg class="tl-heart" width="30" height="27" viewBox="0 0 22 20" aria-hidden="true"><path d="M11 18 C3 12 1 8 1 5.5 C1 2.8 3.2 1 5.6 1 C8 1 10 2.6 11 4.6 C12 2.6 14 1 16.4 1 C18.8 1 21 2.8 21 5.5 C21 8 19 12 11 18Z" fill="#9E5B48"></path></svg>
+        <span class="tl-title">7 years</span>
+        <span class="tl-date">of us</span>
+        <span class="tl-cap">one instant click, and every day since</span>
       </li>
-      <li style="display: flex; flex-direction: column; align-items: center; gap: 8px">
-        <svg width="46" height="40" viewBox="0 0 46 40" fill="none" stroke="#9E5B48" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 28 C14 37 32 37 38 28 Z" fill="#F3D9B5"></path><path d="M23 26 C17 20 20 12 23 6 C26 12 29 20 23 26Z" fill="#E8C9C3"></path><path d="M2 28 H8 M38 28 H44"></path></svg>
-        <span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: #41352F">Forever</span>
-        <span style="font-size: 14px; line-height: 1.55; color: #76594D">beginning 24 January 2027</span>
+      <li class="tl-node">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <span class="tl-title">Forever</span>
+        <span class="tl-date">24 January 2027</span>
+        <span class="tl-cap">the day we say yes, for life</span>
       </li>
-    </ol>
+      </ol>
+    </div>
 
     <div style="margin-top: 6px; width: 100%; max-width: 380px; background: #FFF9F2; border: 1px solid #E8C9C3; border-radius: 18px; padding: 12px 18px; display: flex; align-items: center; gap: 16px; text-align: left">
       <svg width="58" height="40" viewBox="0 0 76 52" fill="none" stroke="#76594D" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="2" y="2" width="72" height="48" rx="6" fill="#F5EBDD"></rect><rect x="10" y="9" width="56" height="20" rx="3" fill="#E8C9C3" fill-opacity=".6"></rect><circle cx="24" cy="19" r="5"></circle><circle cx="52" cy="19" r="5"></circle><path d="M29 19 H47"></path><path d="M18 50 L22 38 H54 L58 50"></path><circle cx="28" cy="44" r="1.4"></circle><circle cx="48" cy="44" r="1.4"></circle><path d="M36 6 C34 4 34 3 35 2.6 C35.6 2.4 36 2.8 36 3.2 C36 2.8 36.4 2.4 37 2.6 C38 3 38 4 36 6Z" stroke="#BD7965" fill="#E8C9C3"></path></svg>
