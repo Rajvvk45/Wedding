@@ -139,7 +139,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
 .gate-card h1{font-size:56px!important;line-height:1!important}
 .gate-card h1 span:nth-child(2){font-size:20px!important}
 }
-@media (max-width:360px){.door-name span:last-child{font-size:23px!important}.door-l .door-name{left:10px!important;right:52px!important}.door-r .door-name{right:10px!important;left:52px!important}.gate-seal{width:96px!important;height:96px!important}#gate-line{display:none}.gate-card h1{font-size:48px!important}.gate-card > div{gap:8px!important;padding-top:36px!important}}
+@media (max-width:360px){.wait-line{white-space:normal!important;font-size:14px!important}.door-name span:last-child{font-size:23px!important}.door-l .door-name{left:10px!important;right:52px!important}.door-r .door-name{right:10px!important;left:52px!important}.gate-seal{width:96px!important;height:96px!important}#gate-line{display:none}.gate-card h1{font-size:48px!important}.gate-card > div{gap:8px!important;padding-top:36px!important}}
 .cd-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:100%;max-width:400px}
 .cd-box{display:flex;flex-direction:column;align-items:center;gap:4px;padding:14px 4px 12px;border:1px solid #E8C9C3;border-radius:14px;background:#FFFDF9}
 .cd-num{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,7.4vw,36px);font-weight:500;line-height:1;color:#9E5B48;font-variant-numeric:tabular-nums}
@@ -575,7 +575,7 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
   <div class="reveal" style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center">
     <svg class="float-heart" width="40" height="36" viewBox="0 0 22 20" fill="#FFF9F2" stroke="#FFF9F2" stroke-width=".8" aria-hidden="true"><path d="M11 18 C3 12 1 8 1 5.5 C1 2.8 3.2 1 5.6 1 C8 1 10 2.6 11 4.6 C12 2.6 14 1 16.4 1 C18.8 1 21 2.8 21 5.5 C21 8 19 12 11 18Z"></path></svg>
     <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(24px, 5.4vw, 32px); line-height: 1.5; color: #FFF9F2">Here's to shared mornings, silly little arguments, endless laughter, growing together, and choosing each other every single day.</p>
-    <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #FFF9F2">We can't wait to celebrate this beautiful beginning with you.</p>
+    <p class="one-line wait-line" style="margin: 0; font-size: min(16px, calc((100vw - 46px) / 28)); line-height: 1.6; color: #FFF9F2; white-space: nowrap">We can't wait to celebrate this beautiful beginning with you.</p>
   </div>
 </section>
 
@@ -721,11 +721,11 @@ Sanjay Jain</span>
     <svg width="74" height="98" viewBox="0 0 120 160" fill="none" stroke="#BD7965" stroke-width="1.4" stroke-linecap="round" aria-hidden="true" style="position: absolute; right: -18px; bottom: -30px; transform: rotate(180deg)">
       <path d="M60 158 C58 120 62 90 60 50"></path><path d="M60 120 C45 112 36 100 34 86 C48 90 57 102 60 120Z" fill="#E8C9C3" fill-opacity=".6"></path><path d="M60 100 C74 94 84 82 86 68 C72 72 62 84 60 100Z" fill="#E8C9C3" fill-opacity=".6"></path><circle cx="60" cy="38" r="5"></circle><path d="M60 33 C52 18 40 16 36 26 C34 34 46 40 55 37"></path><path d="M65 37 C74 40 86 34 84 26 C80 16 68 18 60 33"></path><path d="M56 43 C46 50 44 62 52 64 C58 64 60 54 58 44"></path><path d="M62 44 C60 54 62 64 68 64 C76 62 74 50 64 43"></path>
     </svg>
-    <div style="border: 1px dashed #BD7965; border-radius: 16px; padding: 56px clamp(20px, 6vw, 40px); display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center">
+    <div style="border: 1px dashed #BD7965; border-radius: 16px; padding: clamp(32px, 6vw, 48px) clamp(14px, 5vw, 40px); display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center">
       <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 5vw, 27px); line-height: 1.5">Two hearts. Two families.<br>One beautiful beginning.</p>
       <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #76594D">We would love to have you with us as we begin our forever.</p>
       <svg class="float-heart" width="26" height="24" viewBox="0 0 22 20" fill="#E8C9C3" stroke="#9E5B48" stroke-width=".9" aria-hidden="true"><path d="M11 18 C3 12 1 8 1 5.5 C1 2.8 3.2 1 5.6 1 C8 1 10 2.6 11 4.6 C12 2.6 14 1 16.4 1 C18.8 1 21 2.8 21 5.5 C21 8 19 12 11 18Z"></path></svg>
-      <p style="margin: 0; font-family: 'Pinyon Script', cursive; font-size: clamp(58px, 15vw, 84px); line-height: 1.1; color: #9E5B48">Save the Date</p>
+      <p class="one-line" style="margin: 2px 0 -4px; font-family: 'Pinyon Script', cursive; font-size: clamp(42px, 12.4vw, 84px); line-height: 1.05; color: #9E5B48; white-space: nowrap">Save the Date</p>
       <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 7vw, 38px); font-weight: 500; letter-spacing: .22em; color: #41352F">24 · 01 · 2027</p>
     </div>
   </div>
