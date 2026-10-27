@@ -64,6 +64,8 @@ a{color:#9E5B48}a:hover{color:#76594D}
 .is-opening .door-r{transform:rotateY(100deg);opacity:0}
 .gate-seal{position:absolute;left:50%;top:51.5%;width:clamp(104px,28vw,132px);height:clamp(104px,28vw,132px);transform-origin:center;translate:-50% -50%;border-radius:50%;background:#9E5B48;color:#FFF9F2;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;box-shadow:0 8px 18px -6px rgba(65,53,47,.45),inset 0 0 0 5px #9E5B48,inset 0 0 0 6.5px #E2B76A,inset 0 0 0 9px #9E5B48,inset 0 0 0 10px rgba(226,183,106,.5);transition:opacity .45s ease,transform .45s cubic-bezier(.4,0,.2,1)}
 .is-opening .gate-seal{opacity:0;transform:scale(.7)}
+.gate-invite{position:absolute;left:50%;top:calc(51.5% - clamp(104px,28vw,132px) / 2 - 18px);transform:translate(-50%,-100%);z-index:4;margin:0;width:max-content;max-width:86%;padding:10px 18px;border-radius:14px;background:#F3E6D6;box-shadow:0 0 0 1px #E2C7A6;text-align:center;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;line-height:1.55;letter-spacing:.16em;text-transform:uppercase;color:#41352F;transition:opacity .4s ease}
+.is-opening .gate-invite{opacity:0}
 .sealed-copy{transition:opacity .45s ease}
 .is-opening .sealed-copy{opacity:0}
 .gate-actions{display:grid;justify-items:center}
@@ -91,7 +93,7 @@ a{color:#9E5B48}a:hover{color:#76594D}
 html{scroll-behavior:auto}
 .reveal,.card-in,.petal,.float-heart,.flame,.scrollcue::after{animation:none!important}
 .petal{display:none}
-.gate-card,.door,.gate-seal,.sealed-copy,.open-btn,.celebrate-btn,.btn,.event{transition:none!important;animation:none!important}
+.gate-card,.door,.gate-seal,.gate-invite,.sealed-copy,.open-btn,.celebrate-btn,.btn,.event{transition:none!important;animation:none!important}
 }
 .bg-art{position:absolute;pointer-events:none;z-index:0;height:auto}
 @media (max-width: 640px){.bg-art{opacity:.7}}
@@ -110,7 +112,8 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
 .navlink{font-size:11px;white-space:nowrap}
 .btn{padding:0 20px;letter-spacing:.1em;font-size:12px}
 .gate-diya{width:30px;height:22px}
-.door-name span:first-child{font-size:12px!important;letter-spacing:.16em!important}
+.gate-invite{font-size:11.5px;letter-spacing:.12em;padding:8px 12px}
+.door > svg{display:none}
 .door-name span:last-child{font-size:24px!important}
 .bg-art{opacity:.6}
 .carousel-btn{width:40px;height:40px;margin-top:-20px}
@@ -208,12 +211,12 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
             <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: .38em; color: #76594D; margin: 2px 0">&amp;</span>
             <span>Apoorva</span>
           </h1>
+          <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(18px, 4.4vw, 21px); color: #76594D">are getting married on</p>
           <div style="display: flex; align-items: center; gap: 14px; margin-top: 6px">
             <span style="width: 34px; height: 1px; background: #BD7965"></span>
             <span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; letter-spacing: .3em; color: #41352F">24 · 01 · 2027</span>
             <span style="width: 34px; height: 1px; background: #BD7965"></span>
           </div>
-          <p style="margin: 0; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: #76594D">Sunday · 9:00 AM onwards</p>
         </div>
       </article>
 
@@ -221,17 +224,18 @@ section,footer,header{padding-left:max(20px,env(safe-area-inset-left))!important
         <div class="door door-l" aria-hidden="true">
           <svg width="70" height="92" viewBox="0 0 120 160" fill="none" stroke="#BD7965" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" style="position: absolute; left: 22%; top: 16%; opacity: .9"><path d="M60 158 C58 120 62 90 60 50"></path><path d="M60 120 C45 112 36 100 34 86 C48 90 57 102 60 120Z" fill="#B9C5AE" fill-opacity=".5"></path><path d="M60 100 C74 94 84 82 86 68 C72 72 62 84 60 100Z" fill="#B9C5AE" fill-opacity=".5"></path><circle cx="60" cy="38" r="5"></circle><path d="M60 33 C52 18 40 16 36 26 C34 34 46 40 55 37"></path><path d="M65 37 C74 40 86 34 84 26 C80 16 68 18 60 33"></path><path d="M56 43 C46 50 44 62 52 64 C58 64 60 54 58 44"></path><path d="M62 44 C60 54 62 64 68 64 C76 62 74 50 64 43"></path></svg>
           <div class="door-name">
-            <span style="font-size: 15px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: #41352F">you're</span>
+            
             <span style="font-family: 'Pinyon Script', cursive; font-size: clamp(26px, 6.6vw, 40px); line-height: 1.3; color: #9E5B48">Vivek</span>
           </div>
         </div>
         <div class="door door-r" aria-hidden="true">
           <svg width="70" height="92" viewBox="0 0 120 160" fill="none" stroke="#BD7965" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" style="position: absolute; right: 22%; top: 16%; opacity: .9; transform: scaleX(-1)"><path d="M60 158 C58 120 62 90 60 50"></path><path d="M60 120 C45 112 36 100 34 86 C48 90 57 102 60 120Z" fill="#E8C9C3" fill-opacity=".7"></path><path d="M60 100 C74 94 84 82 86 68 C72 72 62 84 60 100Z" fill="#E8C9C3" fill-opacity=".7"></path><circle cx="60" cy="38" r="5"></circle><path d="M60 33 C52 18 40 16 36 26 C34 34 46 40 55 37"></path><path d="M65 37 C74 40 86 34 84 26 C80 16 68 18 60 33"></path><path d="M56 43 C46 50 44 62 52 64 C58 64 60 54 58 44"></path><path d="M62 44 C60 54 62 64 68 64 C76 62 74 50 64 43"></path></svg>
           <div class="door-name">
-            <span style="font-size: 15px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: #41352F">invited</span>
+            
             <span style="font-family: 'Pinyon Script', cursive; font-size: clamp(26px, 6.6vw, 40px); line-height: 1.3; color: #9E5B48">Apoorva</span>
           </div>
         </div>
+        <p class="gate-invite">You are invited<br>to the wedding ceremony of</p>
         <div class="gate-seal">
           <svg viewBox="0 0 60 70" style="width: 56%; height: auto" fill="none" stroke="#E9C27E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Shri Ganesh"><path d="M23 15 L30 5 L37 15"></path><circle cx="30" cy="3.5" r="1.6" fill="#E9C27E" stroke="none"></circle><path d="M19 19 C23 13 37 13 41 19"></path><path d="M19 19 C9 17 5 27 9 35 C12 41 19 41 24 37"></path><path d="M41 19 C51 17 55 27 51 35 C48 41 41 41 36 37"></path><path d="M30 16 V21"></path><circle cx="25" cy="27" r="1.3" fill="#E9C27E" stroke="none"></circle><circle cx="35" cy="27" r="1.3" fill="#E9C27E" stroke="none"></circle><path d="M30 24 C30 36 28 46 30 54 C32 62 40 64 42 58 C43 54 39 52 37 55"></path><path d="M26 39 C24 43 22 44 20 43"></path></svg>
         </div>
